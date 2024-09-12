@@ -1,0 +1,84 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link type="text/css" href="{% static 'profi/css/style.css' %}" rel="stylesheet" />
+
+</head>
+<body>
+    <script src="{% static 'profi/js/script.js' %}"></script>
+
+<!-- Боковая панель (меню) -->
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Главная</a>
+    <a href="/#about">О нас</a>
+    <a href="/#services">Услуги</a>
+    <a href="/#doctors">Врачи</a>
+    <a href="/price/">Цены</a>
+    <a href="/schedule/">График работы</a>
+    <a href="/blog/">Блог</a>
+    <a href="/#appointment">Записаться на прием</a>
+</div>
+
+<header>
+    <div class="navbar-container">
+        <span class="menu-icon" onclick="openNav()">&#9776;</span>
+        <div class="navbar-logo">
+            <a href="/"><img src="{% static 'profi/img/logo.jpg' %}" alt="Логотип"></a>
+        </div>
+        <nav class="navbar-menu">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/#about">О нас</a></li>
+            <li><a href="/#services">Услуги</a></li>
+            <li><a href="/#doctors">Врачи</a></li>
+            <li><a href="/prices/">Цены</a></li>
+            <li><a href="/schedule/">График работы</a></li>
+            <li><a href="/blog/">Блог</a></li>
+            <li><a href="/#appointment" class="navbar-appointment-button">Записаться на прием</a></li>
+        </nav>
+    </div>
+</header>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Главная</a>
+    <a href="/#about">О нас</a>
+    <a href="/#services">Услуги</a>
+    <a href="/#doctors">Врачи</a>
+    <a href="/price/">Цены</a>
+    <a href="/schedule/">График работы</a>
+    <a href="/blog/">Блог</a>
+    <a href="/#appointment">Записаться на прием</a>
+</div>
+
+
+ {% block content %} {% endblock %}
+
+<div class="social-icons">
+    <a href="https://wa.me/yourwhatsapplink" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://t.me/isanbazarov" target="_blank" class="telegram"><i class="fab fa-telegram"></i></a>
+</div>
+
+<footer id="contact" class="footer">
+    <div class="footer-content">
+        <h3>Контакты</h3>
+        <p>Адрес: ул. Примерная, д. 1, г. Москва</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Email: info@medicalcenter.ru</p>
+        <p>Режим работы: Пн-Пт 9:00 - 18:00</p>
+    </div>
+</footer>
+
+<script src="{% static 'profi/js/script.js' %}"></script>
+</body>
+</html>

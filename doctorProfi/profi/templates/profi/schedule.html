@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>График работы</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ФИО Врача</th>
+            <th>Специализация</th>
+            <th>График работы</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for doctor in doctors %}
+        <tr>
+            <td>{{ doctor.name }}</td>
+            <td>{{ doctor.specialization }}</td>
+            <td>
+                {% for line in doctor.schedule_lines %}
+                    {% if forloop.first %}
+                        <span class="schedule-line first">{{ line }}</span><br>
+                    {% else %}
+                        <span class="schedule-line">{{ line }}</span><br>
+                    {% endif %}
+                {% endfor %}
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Нет данных о врачах</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

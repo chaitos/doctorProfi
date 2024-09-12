@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="home" class="section home-section">
+    <div class="content">
+        <h1>Добро пожаловать в наш медицинский центр</h1>
+        <p>Мы специализируемся на предоставлении высококачественных услуг в области акушерства и гинекологии. Наши специалисты обеспечат вам индивидуальный подход и профессиональную поддержку на всех этапах лечения.</p>
+        <p>Наши основные направления включают:</p>
+        <ul>
+            <li>Пренатальные обследования и консультации</li>
+            <li>Диагностика и лечение гинекологических заболеваний</li>
+            <li>Поддержка в планировании беременности</li>
+            <li>Оперативное вмешательство и реабилитация</li>
+        </ul>
+        <a href="#services" class="btn">Узнать больше</a>
+    </div>
+</section>
+
+
+<section id="features" class="section features-section">
+    <div class="features-content">
+
+        <h2 class="fade-in">Наши преимущества</h2>
+        <div class="features-description fade-in">
+        <ul class="fade-in">
+            <li>Опытные врачи с многолетним стажем работы</li>
+            <li>Современное медицинское оборудование</li>
+            <li>Индивидуальный подход к каждому пациенту</li>
+            <li>Комфортные условия пребывания</li>
+            <li>Широкий спектр услуг в области акушерства и гинекологии</li>
+            <li>Возможность проведения операций и лечения в стационаре</li> <!-- Новое преимущество -->
+        </ul>
+
+            <p>Наши врачи проводят сложные операции и обеспечивают комплексное лечение в стационаре. Мы предоставляем пациентам все необходимые условия для комфортного пребывания и восстановления после хирургических вмешательств.</p>
+            <p>Мы гарантируем качественный уход и поддержку на каждом этапе лечения. В нашей больнице вы получите высококвалифицированную помощь и поддержку, необходимую для быстрого и эффективного восстановления.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="section services-section">
+    <h2>Услуги</h2>
+    <div class="services-grid">
+        <div class="service-item">
+            <h3>Консультации</h3>
+            <p>Индивидуальные консультации по вопросам женского здоровья. Наши врачи готовы ответить на любые ваши вопросы и предложить оптимальные решения.</p>
+        </div>
+        <div class="service-item">
+            <h3>Диагностика</h3>
+            <p>Современные методы диагностики, позволяющие выявить заболевания на ранних стадиях и начать эффективное лечение.</p>
+        </div>
+        <div class="service-item">
+            <h3>Пренатальные обследования</h3>
+            <p>Комплексные обследования во время беременности для контроля за здоровьем матери и ребенка.</p>
+        </div>
+        <div class="service-item">
+            <h3>Лечение гинекологических заболеваний</h3>
+            <p>Эффективные методы лечения гинекологических заболеваний, основанные на современных стандартах.</p>
+        </div>
+        <!-- Дополнительные услуги -->
+    </div>
+</section>
+
+<section id="doctors" class="section doctors-section">
+    <div class="doctors-header">
+        <h2>Наши врачи</h2>
+
+    </div>
+    <div class="doctors-content">
+        <p>Наша команда состоит из опытных и квалифицированных специалистов, готовых помочь вам в любой ситуации. Наши врачи имеют многолетний опыт работы и постоянно совершенствуют свои навыки.</p>
+        <div class="doctors-grid">
+            <div class="doctor-item">
+                <img src="{% static 'profi/img/doctor.png' %}" alt="Ермакова Лилия Валерьевна">
+                <h3>Ермакова Лилия Валерьевна</h3>
+                <p>Акушер-гинеколог</p>
+                <p class="experience">Стаж: 15 лет</p>
+            </div>
+
+            <div class="doctor-item">
+                <img src="{% static 'profi/img/doctor.png' %}" alt="Кадыралиева Бурул Амантуровна">
+                <h3>Кадыралиева Бурул Амантуровна</h3>
+                <p>Акушер-гинеколог</p>
+                <p class="experience">Стаж: 15 лет</p>
+            </div>
+
+            <div class="doctor-item">
+                <img src="{% static 'profi/img/doctor.png' %}" alt="Лепедина Людмила Николаевна">
+                <h3>Лепедина Людмила Николаевна</h3>
+                <p>Врач УЗИ</p>
+                <p class="experience">Стаж: 15 лет</p>
+            </div>
+
+            <div class="doctor-item">
+                <img src="{% static 'profi/img/doctor.png' %}" alt="Рыжкова Светлана Владимировна">
+                <h3>Рыжкова Светлана Владимировна</h3>
+                <p>Врач УЗИ</p>
+                <p class="experience">Стаж: 15 лет</p>
+            </div>
+
+            <div class="doctor-item">
+                <img src="{% static 'profi/img/doctor.png' %}" alt="Тороева Асель Асылбековна">
+                <h3>Тороева Асель Асылбековна</h3>
+                <p>ЛОР</p>
+                <p class="experience">Стаж: 15 лет</p>
+            </div>
+
+            <div class="doctor-item">
+                <img src="{% static 'profi/img/doctor.png' %}" alt="Сиротина Ольга Геннадьевна">
+                <h3>Сиротина Ольга Геннадьевна</h3>
+                <p>Терапевт</p>
+                <p class="experience">Стаж: 15 лет</p>
+            </div>
+
+            <div class="doctor-item">
+                <img src="{% static 'profi/img/doctor.png' %}" alt="Стамкулова Бермет Стамкуловна">
+                <h3>Стамкулова Бермет Стамкуловна</h3>
+                <p>Невропатолог</p>
+                <p class="experience">Стаж: 15 лет</p>
+            </div>
+
+            <div class="doctor-item">
+                <img src="{% static 'profi/img/doctor.png' %}" alt="Коздрович Светлана Николаевна">
+                <h3>Коздрович Светлана Николаевна</h3>
+                <p>Акушер-гинеколог</p>
+                <p class="experience">Стаж: 15 лет</p>
+            </div>
+        </div>
+            <!-- Добавьте дополнительные блоки для врачей при необходимости -->
+        </div>
+        <div class="underline"></div>
+        <a href="/schedule/" class="schedule-button">Посмотреть график врачей</a>
+
+    </div>
+</section>
+
+
+<section id="about" class="section about-section">
+    <div class="content">
+        <h1>О нас</h1>
+        <p>Мы предоставляем медицинские услуги высокого качества в области акушерства и гинекологии.</p>
+        <!-- Блок с адресом -->
+        <h1 class="address">Мы находимся по адресу</h1>
+        <a class="dg-widget-link" href="http://2gis.kg/bishkek/firm/70000001035622268/center/74.58705282158918,42.841998645363546/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Бишкека</a>
+        <div class="dg-widget-link">
+            <a href="http://2gis.kg/bishkek/firm/70000001035622268/photos/70000001035622268/center/74.58705282158918,42.841998645363546/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a>
+        </div>
+        <div class="map">
+            <div class="dg-widget-link">
+                <a href="http://2gis.kg/bishkek/center/74.586311,42.841661/zoom/16/routeTab/rsType/bus/to/74.586311,42.841661╎Доктор профи, медицинский центр?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Доктор профи, медицинский центр</a>
+            </div>
+            <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+            <script charset="utf-8">new DGWidgetLoader({"width":900,"height":600,"borderColor":"#a3a3a3","pos":{"lat":42.841998645363546,"lon":74.58705282158918,"zoom":16},"opt":{"city":"bishkek"},"org":[{"id":"70000001035622268"}]});</script>
+            <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+        </div>
+    </div>
+</section>
+
+
+<section id="appointment" class="section appointment-section">
+    <div class="appointment-content">
+        <h2>Записаться на прием</h2>
+        <p>Заполните форму ниже, и мы свяжемся с вами для подтверждения записи.</p>
+
+        <!-- Сообщения об успехе и ошибке (изначально скрыты) -->
+        <div id="successMessage" style="color: blue; display: none; font-weight: bold;">
+            <!-- Сообщение об успехе появится здесь -->
+        </div>
+
+        <div id="errorMessage" style="color: red; display: none; font-weight: bold;">
+            <!-- Сообщение об ошибке появится здесь -->
+        </div>
+
+        <!-- Форма для записи на прием -->
+        <form id="appointmentForm" action="{% url 'create_appointment' %}" method="POST">
+    {% csrf_token %}
+
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required pattern="\d{10,}" inputmode="numeric">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Ваш email" required>
+
+    <label for="doctor">Выберите врача:</label>
+    <select id="doctor" name="doctor" required>
+        <option value="" disabled selected>Выберите врача</option>
+        {% for doctor in doctors %}
+            <option value="{{ doctor.id }}">{{ doctor.specialization }} - {{ doctor.name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="date">Дата приема:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Время приема:</label>
+    <input type="time" id="time" name="time" required>
+
+    <label for="message">Комментарий:</label>
+    <textarea id="message" name="message" placeholder="Ваши комментарии или пожелания"></textarea>
+
+    <button type="submit" class="btn">Отправить</button>
+</form>
+
+        <!-- Подключение jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- AJAX код для отправки формы -->
+        <script>
+$(document).ready(function() {
+    $('#appointmentForm').on('submit', function(event) {
+        event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+        // Очищаем предыдущие сообщения
+        $('#successMessage').hide();
+        $('#errorMessage').hide();
+
+        // Логируем данные формы перед отправкой, чтобы убедиться, что они верные
+        console.log("Данные формы: ", $(this).serialize());
+
+        $.ajax({
+            url: "{% url 'create_appointment' %}",
+            type: "POST",
+            data: $(this).serialize(), // Собираем данные формы
+            headers: { 'X-CSRFToken': '{{ csrf_token }}' }, // Добавляем CSRF-токен
+
+            success: function(response) {
+                console.log("Успешный ответ сервера: ", response);  // Логируем ответ сервера
+
+                if (response.success) {
+                    // Показываем сообщение об успехе
+                    $('#successMessage').text(response.message).show(); // Исправлено, чтобы не создавалось лишних элементов
+
+                    // Очищаем форму после успешной отправки
+                    $('#appointmentForm')[0].reset();
+                } else {
+                    // Если возникла ошибка на стороне данных
+                    $('#errorMessage').text(response.message || 'Произошла ошибка при отправке формы.').show();
+                }
+            },
+
+            error: function(response) {
+                // Логируем ошибку для отладки
+                console.log("Ошибка при запросе: ", response);
+
+                // Отображаем сообщение об ошибке при сбое запроса
+                $('#errorMessage').text('Произошла ошибка при отправке формы. Попробуйте снова.').show();
+            }
+        });
+    });
+});
+        </script>
+    </div>
+</section>
+
+{% endblock %}

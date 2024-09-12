@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    <link rel="stylesheet" href="css/blog.css">
+
+{% block content %}
+
+
+    <!-- Основной контент страницы -->
+    <main>
+        <!-- Переключатель -->
+        <div class="tabs">
+            <button class="tab-button active" data-target="#blog-posts">Блог</button>
+            <button class="tab-button" data-target="#news-feed">Новости</button>
+        </div>
+        
+        <section class="tab-content" id="blog-posts">
+            <!-- Блоги -->
+            <article class="post">
+                <h2>Советы по здоровью №1</h2>
+                <p>Краткое описание первого совета по здоровью...</p>
+                <div class="full-text">
+                    <p>Полный текст первого совета по здоровью...</p>
+                </div>
+                <button class="read-more">Читать далее</button>
+            </article>
+            <article class="post">
+                <h2>Советы по здоровью №2</h2>
+                <p>Краткое описание второго совета по здоровью...</p>
+                <div class="full-text">
+                    <p>Полный текст второго совета по здоровью...</p>
+                </div>
+                <button class="read-more">Читать далее</button>
+            </article>
+        </section>
+        
+        <section class="tab-content" id="news-feed" style="display: none;">
+            <!-- Новости -->
+            <article class="news-item">
+                <h2>Новости спорта №1</h2>
+                <p>Краткое описание первой новости спорта...</p>
+                <div class="full-text">
+                    <p>Полный текст первой новости спорта...</p>
+                </div>
+                <button class="read-more">Читать далее</button>
+            </article>
+            <article class="news-item">
+                <h2>Новости спорта №2</h2>
+                <p>Краткое описание второй новости спорта...</p>
+                <div class="full-text">
+                    <p>Полный текст второй новости спорта...</p>
+                </div>
+                <button class="read-more">Читать далее</button>
+            </article>
+        </section>
+        
+
+        <section class="gym-link">
+            <a href="gym.html" class="gym-button">Перейти в тренажерный зал</a>
+        </section>
+    </main>
+
+
+
+    <script src="js/script.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const targetId = button.getAttribute("data-target");
+
+            // Удалить активный класс у всех кнопок
+            tabButtons.forEach(btn => btn.classList.remove("active"));
+
+            // Убрать класс active у всех контентов и скрыть их
+            tabContents.forEach(content => {
+                content.classList.remove("active");
+                content.style.display = "none";
+            });
+
+            // Показать выбранный контент
+            document.querySelector(targetId).classList.add("active");
+            document.querySelector(targetId).style.display = "block";
+
+            // Добавить активный класс к нажатой кнопке
+            button.classList.add("active");
+        });
+    });
+
+    // Показываем первый таб по умолчанию
+    document.querySelector(".tab-content").style.display = "block";
+
+    // Обработка нажатия на "Читать далее"
+    document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const fullText = this.previousElementSibling;
+            const isVisible = fullText.style.display === 'block';
+            fullText.style.display = isVisible ? 'none' : 'block';
+            this.textContent = isVisible ? 'Читать далее' : 'Скрыть';
+        });
+    });
+});
+
+
+    </script>
+</body>
+
+{% endblock %}
